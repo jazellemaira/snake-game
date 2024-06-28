@@ -16,4 +16,7 @@ body {
     background-color: #ccc;
     height: 100vmin;
     width: 100vmin;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
 }
