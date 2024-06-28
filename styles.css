@@ -20,3 +20,13 @@ body {
     grid-template-columns: repeat(21, 1fr);
     grid-template-rows: repeat(21, 1fr);
 }
+
+.snake {
+    background-color: hsl(120, 99%, 30%);
+    border: .25vmin solid #222;
+}
+
+.food {
+    background-color: hsl(0, 79%, 45%);
+    border: .25vmin solid #222;
+}
