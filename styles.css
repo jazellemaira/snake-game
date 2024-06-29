@@ -108,6 +108,10 @@ body {
   
 }
 
+.snake-head {
+    background-color: hsl(120, 99%, 20%); 
+}
+
 .food {
   background-color: hsla(0, 80%, 45%, 0.45);
   border-radius: 50%;

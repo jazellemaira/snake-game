@@ -1,6 +1,7 @@
 import { getInputDirection } from "./input.js"
 
 export const SNAKE_SPEED = 5
+
 const snakeBody = [{ x: 11, y: 11 }]
 let newSegments = 0
 
@@ -16,12 +17,16 @@ export function update() {
 }
 
 export function draw(gameBoard) {
-  snakeBody.forEach((segment) => {
+  snakeBody.forEach((segment, index) => {
     const snakeElement = document.createElement("div")
     snakeElement.style.gridRowStart = segment.y
     snakeElement.style.gridColumnStart = segment.x
     snakeElement.classList.add("snake")
     gameBoard.appendChild(snakeElement)
+
+    if (index === 0) {
+      snakeElement.classList.add("snake-head")
+    }
   })
 }
 
