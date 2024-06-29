@@ -17,7 +17,7 @@ const gameBoard = document.querySelector("#game-board")
 function main(currentTime) {
   if (gameOver) {
     if (confirm("You lost! Press ok to restart.")) {
-      window.location = "/"
+      window.location.reload()
     }
     window.removeEventListener("keydown", handleKeydown)
     return
