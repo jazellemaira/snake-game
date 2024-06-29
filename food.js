@@ -1,12 +1,15 @@
 import { randomGridPosition } from "./grid.js"
 import { onSnake, expandSnake } from "./snake.js"
 
-let food = getRandomFoodPosition()
 const EXPANSION_RATE = 1
+const scoreCounter = document.querySelector(".score-counter")
+let food = getRandomFoodPosition()
+let foodEaten = 0
 
 export function update() {
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE)
+    addScore(EXPANSION_RATE)
     food = getRandomFoodPosition()
   }
 }
@@ -25,4 +28,8 @@ function getRandomFoodPosition() {
     newFoodPosition = randomGridPosition()
   }
   return newFoodPosition
+}
+
+function addScore(amount) {
+  scoreCounter.innerHTML = foodEaten += amount
 }
