@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="game.js" type="module"></script>
-</head>
-<body>
-    <div id="game-board"></div>
-</body>
+  </head>
+  <body class="centered-flex">
+    <div class="game-console centered-flex">
+      <div class="game-board-header centered-flex">
+        <div class="centered-flex">
+          <div class="game-title">
+            <h1>Snake</h1>
+            <span>debugger</span>
+          </div>
+          <img id="arrow-keys" src="arrow-keys-light.png" alt="Arrow keys" />
+        </div>
+        <div class="score-area centered-flex">
+          <img src="bug.jpg" alt="A lady bug" />
+          <span>&colon;</span>
+          <div class="score-counter">1</div>
+        </div>
+      </div>
+      <div id="game-board"></div>
+    </div>
+  </body>
 </html>

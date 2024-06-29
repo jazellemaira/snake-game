@@ -1,32 +1,117 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "SnakeFont";
+  src: url(SnakeGame.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: #000;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ddd;
+}
+
+.centered-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-console {
+  flex-direction: column;
+  background-color: #222;
+  padding: 25px;
+}
+
+.game-board-header {
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.game-board-header img {
+    width: 60px;  
+}
+
+#arrow-keys {
+    position: relative;
+    top: -5px;
+    filter: opacity(.6);
+}
+
+.game-title {
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.game-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "SnakeFont";
+  letter-spacing: 0.2cm;
+}
+
+.game-title span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 0.75rem;
+  letter-spacing: 0.1cm;
+  color: #777;
+}
+
+.score-area img {
+  width: 30px;
+}
+
+.score-area span,
+.score-area div {
+  margin-left: 4px;
+  color: #bbb;
+}
+
+.score-area span {
+    font-size: 1.5rem;
+}
+
+.score-area div {
+  width: 50px;
+  font-size: 1.15rem;
+  text-align: center;
+  background-color: #aaa;
+  color: #000;
+  padding: 4px 6px;
 }
 
 #game-board {
-    background-color: #ccc;
-    height: 100vmin;
-    width: 100vmin;
-    display: grid;
-    grid-template-columns: repeat(21, 1fr);
-    grid-template-rows: repeat(21, 1fr);
+  background-color: #ddd;
+  height: 70vmin;
+  width: 70vmin;
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
 }
 
 .snake {
-    background-color: hsl(120, 99%, 30%);
-    border: .25vmin solid #222;
+  background-color: hsl(120, 99%, 30%);
+  border: 0.15vmin solid #333;
+  border-radius: 8px;
+  
 }
 
 .food {
-    background-color: hsl(0, 79%, 45%);
-    border: .25vmin solid #222;
+  background-color: hsla(0, 80%, 45%, 0.45);
+  border-radius: 50%;
+  background-image: url(bug.jpg);
+  background-size: cover;
 }
+
